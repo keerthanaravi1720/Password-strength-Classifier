@@ -1,0 +1,291 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1a0b2e 0%, #4a148c 100%); 
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+}
+
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 40px;
+  width: 400px;
+  text-align: center;
+  color: white;
+}
+
+
+/* .glass-card:hover {
+  transform: translateY(-5px);
+} */
+
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+ background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+  -webkit-background-clip: text;  
+  background-clip: text;           
+  -webkit-text-fill-color: transparent;
+}
+
+
+.subtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 30px;
+}
+
+/* 5. NEUMORPHIC INPUT (The "Carved" look) */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.neumorphic-input {
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 12px;
+  padding: 15px 20px;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.5), 
+              inset -4px -4px 8px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.neumorphic-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.neumorphic-input:focus {
+  box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.6), 
+              inset -6px -6px 12px rgba(255, 255, 255, 0.08),
+              0 0 10px rgba(142, 197, 252, 0.3); 
+}
+
+
+.neumorphic-button {
+  background: linear-gradient(145deg, #6a1b9a, #4a148c);
+  border: none;
+  border-radius: 12px;
+  padding: 15px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.3), -5px -5px 10px rgba(255,255,255,0.1);
+  transition: all 0.2s ease;
+}
+
+.neumorphic-button:active {
+  box-shadow: inset 5px 5px 10px rgba(0,0,0,0.3), inset -5px -5px 10px rgba(255,255,255,0.1);
+  transform: scale(0.98);
+}
+
+.neumorphic-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+.result-area {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.strength-label {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.bars {
+  display: flex;
+  gap: 10px;
+}
+
+.bar {
+  height: 10px;
+  width: 40px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1); 
+  transition: all 0.5s ease;
+}
+
+
+.bar.active.weak {
+  background: #ff4d4d; 
+  box-shadow: 0 0 10px #ff4d4d;
+}
+
+.bar.active.medium {
+  background: #ffbb33;
+  box-shadow: 0 0 10px #ffbb33;
+}
+
+.bar.active.strong {
+  background: #00e676;
+  box-shadow: 0 0 10px #00e676;
+}
+
+
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+  background: linear-gradient(135deg, #1a0b2e 0%, #4a148c 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container { width: 100%; display: flex; justify-content: center; }
+
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.07);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 40px;
+  width: 420px;
+  text-align: center;
+  color: white;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+.fade-in { animation: fadeIn 0.8s ease-out; }
+.slide-up { animation: slideUp 0.5s ease-out; }
+
+/* HEADER */
+.header h1 { font-size: 32px; font-weight: 700; margin-bottom: 5px; }
+.header p { font-size: 14px; color: rgba(255, 255, 255, 0.6); margin-bottom: 30px; letter-spacing: 1px; }
+.highlight { background: linear-gradient(to right, #00e676, #29b6f6); 
+  -webkit-background-clip: text; 
+  background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+
+.input-wrapper { position: relative; margin-bottom: 25px; }
+.neumorphic-input {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px 50px 16px 20px;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3);
+}
+.neumorphic-input:focus { border-color: rgba(142, 197, 252, 0.5); box-shadow: 0 0 15px rgba(142, 197, 252, 0.2); }
+.neumorphic-input::placeholder { color: rgba(255, 255, 255, 0.3); }
+
+.icon-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.2s;
+}
+.icon-btn:hover { color: white; }
+
+
+.button-row { display: flex; gap: 15px; margin-bottom: 25px; }
+
+.btn-generate, .btn-analyze {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.btn-generate {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.btn-generate:hover { background: rgba(255, 255, 255, 0.2); transform: translateY(-2px); }
+
+.btn-analyze {
+  background: linear-gradient(135deg, #00e676 0%, #00c853 100%);
+  color: #000;
+}
+.btn-analyze:hover { filter: brightness(1.1); transform: translateY(-2px); }
+.btn-analyze:disabled { background: #555; cursor: not-allowed; transform: none; }
+
+
+.result-area {
+  background: rgba(0,0,0,0.2);
+  border-radius: 12px;
+  padding: 15px;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.strength-badge {
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.message {
+  font-style: italic;
+  font-size: 14px;
+  color: #d1c4e9; 
+  line-height: 1.4;
+}
+
