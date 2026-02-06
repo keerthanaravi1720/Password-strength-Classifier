@@ -9,7 +9,7 @@ function App() {
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
 
-  // --- SARCASTIC MESSAGES ---
+  
   const getSarcasticMessage = (level) => {
     const weakMsgs = ["A toddler could guess this.", "12345? Seriously?", "My grandma has a stronger password."];
     const mediumMsgs = ["Meh. It's okay, I guess.", "Not terrible, but not great.", "Average Joe security."];
@@ -22,8 +22,7 @@ function App() {
     return "";
   };
 
-  // --- PASSWORD GENERATOR ---
- // In frontend/src/App.jsx
+  
 const generatePassword = () => {
   const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+";
   let pass = "";
